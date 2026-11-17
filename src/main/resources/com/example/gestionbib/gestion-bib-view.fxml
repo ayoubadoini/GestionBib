@@ -1,0 +1,139 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<VBox alignment="CENTER" prefHeight="502.0" prefWidth="601.0" spacing="20.0" xmlns="http://javafx.com/javafx/17.0.2-ea" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.gestionbib.GestionBibController">
+    <padding>
+        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+    </padding>
+    <children>
+        <TabPane fx:id="tpMenu" prefHeight="503.0" prefWidth="561.0" tabClosingPolicy="UNAVAILABLE">
+            <tabs>
+                <Tab text="Consultation, Suppression et Recherche">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <HBox layoutX="14.0" layoutY="14.0" prefHeight="44.0" prefWidth="533.0">
+                                    <children>
+                                        <Label text="Titre" />
+                                        <TextField fx:id="titreR" />
+                                        <Button fx:id="btnRechercher" mnemonicParsing="false" text="Rechercher" />
+                                    </children>
+                                </HBox>
+                                <TableView fx:id="tabLivres" layoutX="10.0" layoutY="58.0" prefHeight="294.0" prefWidth="542.0">
+                                    <columns>
+                                        <TableColumn prefWidth="75.0" text="C1" />
+                                        <TableColumn prefWidth="75.0" text="C2" />
+                                    </columns>
+                                </TableView>
+                                <HBox alignment="CENTER" layoutX="11.0" layoutY="355.0" prefHeight="34.0" prefWidth="541.0">
+                                    <children>
+                                        <Button fx:id="btnSupprimer" mnemonicParsing="false" text="Supprimer" />
+                                        <Button fx:id="btnSupprimerTout" mnemonicParsing="false" text="Supprimer Tout" />
+                                        <Button fx:id="btnQuitter" mnemonicParsing="false" text="Quitter" />
+                                    </children>
+                                </HBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Ajout">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="222.0" prefWidth="523.0" spacing="20.0">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <children>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" text="Titre" />
+                                                        <TextField fx:id="tfTitre" prefHeight="25.0" prefWidth="396.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefHeight="17.0" prefWidth="95.0" text="Couleur" />
+                                                        <ColorPicker fx:id="cpCouleur" prefHeight="25.0" prefWidth="384.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefHeight="17.0" prefWidth="102.0" text="Nb Pages" />
+                                                        <Label fx:id="lbNbPages" prefHeight="17.0" prefWidth="55.0" text="Label" />
+                                                        <Slider fx:id="slNbPages" max="200.0" minorTickCount="5" prefHeight="14.0" prefWidth="325.0" showTickLabels="true" showTickMarks="true" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Button fx:id="btnAjouter" mnemonicParsing="false" text="Ajouter" />
+                                                        <Button fx:id="btnAnnuler" mnemonicParsing="false" text="Annuler" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+                <Tab text="Modification">
+                    <content>
+                        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="180.0" prefWidth="200.0">
+                            <children>
+                                <VBox alignment="CENTER" prefHeight="244.0" prefWidth="523.0" spacing="20.0">
+                                    <padding>
+                                        <Insets bottom="20.0" left="20.0" right="20.0" top="20.0" />
+                                    </padding>
+                                    <children>
+                                        <VBox prefHeight="200.0" prefWidth="100.0">
+                                            <children>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefHeight="17.0" prefWidth="94.0" text="Id" />
+                                                        <ComboBox fx:id="cbId" prefWidth="150.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" text="Titre" />
+                                                        <TextField fx:id="tfTitreM" prefHeight="25.0" prefWidth="396.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefWidth="100.0" text="Couleur" />
+                                                        <ColorPicker fx:id="cpCouleurM" prefHeight="25.0" prefWidth="384.0" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Label prefHeight="17.0" prefWidth="102.0" text="Nb Pages" />
+                                                        <Label fx:id="lbNbPagesM" prefHeight="17.0" prefWidth="55.0" text="Label" />
+                                                        <Slider fx:id="slNbPagesM" max="200.0" minorTickCount="5" prefHeight="14.0" prefWidth="325.0" showTickLabels="true" showTickMarks="true" />
+                                                    </children>
+                                                </HBox>
+                                                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0">
+                                                    <children>
+                                                        <Button fx:id="btnModifier" mnemonicParsing="false" text="Modifier" />
+                                                        <Button fx:id="btnAnnulerM" mnemonicParsing="false" text="Annuler" />
+                                                    </children>
+                                                </HBox>
+                                            </children>
+                                        </VBox>
+                                    </children>
+                                </VBox>
+                            </children>
+                        </AnchorPane>
+                    </content>
+                </Tab>
+            </tabs>
+        </TabPane>
+    </children>
+</VBox>
